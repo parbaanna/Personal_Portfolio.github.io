@@ -1,0 +1,251 @@
+    @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        height: 100%;
+    }
+    
+    #header {
+        /* height: 150px; */
+        width: 100%;
+        height: 100%;
+        /* overflow-y: scroll;
+    scroll-behavior: smooth; */
+    }
+    
+    #navbar {
+        background: rgb(231, 90, 90);
+    }
+    
+    nav ul {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-end;
+    }
+    
+    .navbar-nav li {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 2.5rem;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 25px;
+        text-transform: capitalize;
+    }
+    
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    
+    .custom-toggler.navbar-toggler {
+        border-color: white
+    }
+    
+    a.nav-link {
+        color: white;
+        font-family: 'Krona One', sans-serif;
+        position: relative;
+    }
+    
+    .nav-link:after {
+        content: "";
+        position: absolute;
+        background-color: rgb(92, 76, 76);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: 10px;
+    }
+    
+    .nav-link:hover:after {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+    #welcome-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: rgb(92, 76, 76);
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        font-family: 'Krona One', sans-serif;
+    }
+    
+    h1 {
+        /* font-size: 3rem; */
+        color: white;
+        text-transform: capitalize;
+        margin-top: 100px;
+    }
+    
+    #welcome-section p {
+        font-size: 1rem;
+        color: rgb(231, 90, 90);
+        width: 50%;
+        position: relative;
+        right: 0;
+        line-height: 2;
+        padding: 10px;
+        margin: 15px;
+    }
+    
+    #click_me {
+        margin-top: 100px;
+    }
+    
+    #projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        /* max-width: 100%; */
+        padding: 5rem;
+        /* margin: 10px; */
+        background: rgb(196, 192, 192);
+    }
+    
+    h2 {
+        text-transform: capitalize;
+        font-family: 'Krona One', sans-serif;
+        text-align: center;
+        position: relative;
+        top: 0;
+        border-bottom: 2px solid red;
+    }
+    
+    .project-tile img {
+        /* max-width: 80%; */
+        width: 100%;
+        /*  height: 100%; */
+        margin-top: 30px;
+        /*i add this one */
+    }
+    
+    .project-title {
+        background: rgb(231, 90, 90);
+        border-radius: 1px;
+        padding: 20px;
+        text-align: center;
+        /* color: black; */
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .link:hover {
+        color: white;
+    }
+    
+    #profile-link:hover {
+        color: var(--main-gray);
+        transition: color 0.3s ease-out;
+    }
+    
+    footer {
+        background: black;
+        min-height: 50vh;
+    }
+    
+    #contacts {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: white;
+        margin: 0 auto;
+        line-height: 3;
+    }
+    
+    .contacts-details {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 150px;
+        /* i add this css  absolute and margin-top: ;*/
+    }
+    
+    .information {
+        margin: 30px;
+        padding: 20px;
+    }
+    
+    hr {
+        width: 100%;
+        border: 3px solid rgb(231, 90, 90);
+        margin-top: 300px;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        color: white;
+    }
+    
+    .info p {
+        padding: 10px;
+    }
+    
+    #note {
+        border: 2px solid red;
+    }
+    
+    @media (min-width: 60rem) {
+        #projects {
+            display: flex;
+            flex-direction: row;
+        }
+        h2 {
+            position: absolute;
+            margin-top: 80px;
+        }
+        .project-tile {
+            margin-top: 100px;
+            padding: 10px;
+        }
+        #contacts {
+            display: flex;
+            flex-direction: column;
+        }
+        .contacts-details {
+            display: flex;
+            flex-direction: row;
+        }
+        .info {
+            display: flex;
+            flex-direction: row;
+        }
+        .project-tile img {
+            width: 100%;
+            height: 100%;
+            margin-top: 30px;
+        }
+    }
+    
+    @media (max-width:28.75rem) {
+        h1,
+        h2 {
+            font-size: 2rem;
+        }
+        #welcome-section p {
+            font-size: 1.2rem;
+        }
+    }
